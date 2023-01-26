@@ -1,23 +1,84 @@
-# JSDoc Boilerplate
+## 챌린지 과제 가이드
 
-## Usage
+>요구 사항을 구현하지 않고 설계만합니다.
 
-### Install
+- Todo 앱을 JSDoc으로 문서화하는 챌린지 과제입니다.
+- 모든 요구사항은 JSDoc을 기반으로 수행합니다.
+- 제출할 저장소 명은 wanted-pre-onboarding-challenge-fe-2로 생성해 주세요. (Public 권한 필요)
+- 완성한 과제의 저장소 링크를 모집 마감 후 설문 조사를 통해 제출해주세요. (개강 시 설문 조사 링크 전달 예정)
+- 과제 수행 개수에 따라 기본적인 평가가 이루어지며, 커리큘럼 운영 과정에서 최소한의 수준을 파악하기 위한 용도입니다.
+- 해당 과제에 대한 해설은 개강 후 진행될 예정입니다.
+- README.md를 꼭 작성해 주세요. 본인에 대한 소개나 프로젝트 소개 등 자유롭게 작성해주시면 됩니다.
+- JSDoc 환경 구성에 어색한 경우 [Boilerplate](https://github.com/pocojang/jsdoc-boilerplate)를 이용하셔도 됩니다
 
-```bash
-npm install
-or
-yarn
+<!-- <details>
+<summary> -->
+<h2>🧑‍💻 소개</h2>
+<!-- </summary> -->
+<!-- 프로젝트 소개를 추가한 후 주석 풀기 -->
+너무 좋은 챌린지에 참여하여 쉽게 접하기 어려운 주제를 배우고 사용할 수 있게되어 굉장히 기쁩니다.  
+이번 챌린지 기간동안 열심히 참여하여 역량을 키울 수 있도록 노력하겠습니다.
+<!-- </details> -->
+<details>
+<summary>
+<h2>📝 Requirements</h2>
+</summary>
+
+### 필수 요구사항
+>아래의 Todo 앱 요구사항을 참고하여
+
+- [x] 필요한 데이터를 모두 모델링한다.
+- [x] 사용되는 모든 함수를 `선언부만` 만든다.
+  - [x] 함수 및 클래스의 내부는 구현하지 않습니다.
+- [ ] `JSDoc`을 활용해 문서화한다.
+- [ ] `GitHub Page`를 활용해 `JSDoc` 정적 페이지를 배포한다.
+
+### Todo
+
+```js
+Todo {
+  아이디(required),
+  내용(required),
+  완료여부(required),
+  카테고리(required),
+  태그들(optional),
+}
 ```
 
-### Build
+#### CREATE
 
-```bash
-npm run docs
-or
-yarn docs
+- [x] 할 일을 추가할 수 있다. - createTodo
+- [x] 내용없이 추가할 수 없다.
+
+#### READ
+
+- [x] 모든 할 일을 조회할 수 있다. - getTodos
+- [x] ID를 기반으로 특정 할 일을 조회할 수 있다. - getTodoById
+
+#### UPDATE
+
+- [x] ID를 제외한 모든 속성을 수정할 수 있다. - updateTodo
+- [x] 특정 할 일의 특정 태그를 수정할 수 있다. - updateTagsById
+
+#### DELETE
+
+- [x] ID를 기반으로 특정 할 일을 삭제할 수 있다. - deleteTodoById
+- [x] 모든 할 일을 제거할 수 있다. - deleteTodos
+- [x] 특정 할 일의 특정 태그를 삭제할 수 있다. - deleteTag
+- [x] 특정 할 일의 모든 태그를 제거할 수 있다. - deleteTags
+
+
+#### Modeling (Shape)
+
+```js
+Item {
+  property(required),
+  property(optional),
+}
 ```
 
 #### Reference
 
-- [jsdoc.app](https://jsdoc.app)
+- [use JSDoc](https://jsdoc.app)
+- [JSDoc Boilerplate](https://github.com/pocojang/jsdoc-boilerplate)
+</details>
