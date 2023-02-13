@@ -11,6 +11,29 @@
 - README.md를 꼭 작성해 주세요. 본인에 대한 소개나 프로젝트 소개 등 자유롭게 작성해주시면 됩니다.
 - JSDoc 환경 구성에 어색한 경우 [Boilerplate](https://github.com/pocojang/jsdoc-boilerplate)를 이용하셔도 됩니다
 
+
+<details>
+<summary>
+<h2>3주차 과제</h2>
+</summary>
+참조: <a href="https://github.com/HJeong1200/wanted-pre-onboarding-challenge-fe-2">hjeong1200님의 과제</a>
+
+진행하며 수정한 사항
+1. CreateTodo 
+Todo의 타입에는 tags가 optional이지만, CreateTodo는 content,isDone,category가 isDone이었고
+  만약 이 타입대로 진행한다면 내용이 없는 Todo를 만들어야하므로 CreateTodo interface의 optional부분을 삭제함
+2. GetTodo
+입력된 id와 일치는 Todo가 없을 경우 undefined를 반환하도록 GetTodo의 리턴 타입을 Todo와 undefined의 유니온으로 변경
+3. UpdateTodo
+위와 동일, 그리고 UpdatedTodo와 Todo는 동일한 타입이나, Todo를 저장하는 todos가 Todo[] 타입으로 되어있어 타입이 맞지 않으므로
+body로 받는 UpdatedTodo 타입을 Todo로 변경하였고, 이미 body로 넣어주는 Todo와 동일한 값을 반환해줄 필요가 없으므로
+Update의 결과가 성공인지 실패인지를 구분하기 위해 boolean을 반환하도록 수정
+4. UpdateTag
+id일치 todo없을때, tags가 없을때, length가 0일때, tagIndex가 length보다 높을때의 타입세이프를 넣고, 수정이 정상적으로 되었을때 Todo를 반환하도록 수정
+5. DeleteTodo, DeleteTag
+위와 동일
+</details>
+
 <!-- <details>
 <summary> -->
 <h2>🧑‍💻 소개</h2>
@@ -82,3 +105,5 @@ Item {
 - [use JSDoc](https://jsdoc.app)
 - [JSDoc Boilerplate](https://github.com/pocojang/jsdoc-boilerplate)
 </details>
+
+
